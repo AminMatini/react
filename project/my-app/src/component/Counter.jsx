@@ -4,7 +4,8 @@ const Counter = ({inc , dec , res , count}) =>{
     return(
         <>
             <h2>شمارنده من : </h2>
-            <p>{count}</p>
+            <p style={count <= 0 ? {color:'red'} : {color:'green'}}>{count}</p>
+            <p style={{color: count <= 0 ? 'red' : 'green'}}>{count}</p>
             <br/>
             <button onClick={inc}>+</button>
             <button onClick={dec}>-</button>

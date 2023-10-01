@@ -6,6 +6,9 @@ import Counter from './component/Counter';
 const App = () => {
   const [count , setCount] = useState(0);
 
+
+  const myStyle = {border:'1px solid red'}
+
   const increaseCount = () =>{
     setCount(count + 1);
   }
@@ -20,6 +23,7 @@ const App = () => {
 
   return (
     <>
+      <h1 style={myStyle}>شمارنده من</h1>
       <Counter inc={increaseCount} dec={decreaseCount} res={resetCount} count={count}/>
     </>
   );
